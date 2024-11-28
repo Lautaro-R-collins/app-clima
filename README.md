@@ -1,19 +1,8 @@
-# Weather App
+# React + Vite
 
-Esta es una aplicación web para mostrar el clima actual en cualquier ciudad del mundo. Utiliza la API de OpenWeatherMap para obtener datos en tiempo real y presenta la información de manera sencilla y visualmente atractiva.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Funcionalidades
+Currently, two official plugins are available:
 
-- Consulta el clima actual para cualquier ciudad.
-- Muestra el clima con una representación gráfica usando íconos.
-- Información detallada sobre la temperatura, descripción del clima, y más.
-- Soporta diversas condiciones climáticas como lluvias, niebla, tormentas, etc.
-
-## Tecnologías utilizadas
-
-- **React**: Para la construcción de la interfaz de usuario.
-- **Tailwind CSS**: Para los estilos.
-- **OpenWeatherMap API**: Para obtener los datos del clima.
-- **react-icons**: Para los íconos representando las condiciones climáticas.
-
-![app](./src/assets/Screenshot%202024-11-28%20170528.png)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
