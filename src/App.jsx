@@ -1,5 +1,5 @@
 import './index.css';
-import Header from './components/Header';
+import Header from './components/header';
 import MainWeather from './components/MainWeather';
 import WeatherDetails from './components/WeatherDetails';
 import WeeklyForecast from './components/WeeklyForecast';
