@@ -1,24 +1,25 @@
 import React, { useContext, useState } from 'react';
-import { FaSun, FaMoon, FaSearchLocation } from 'react-icons/fa';
+import { FaSun, FaMoon } from 'react-icons/fa';
 import { WeatherContext } from '../context/WeatherContext';
+import { CiSearch } from "react-icons/ci";
 
 export const Header = ({ toggleTheme, darkMode }) => {
-  const { searchCity } = useContext(WeatherContext);  
-  const [inputCity, setInputCity] = useState(''); 
+  const { searchCity } = useContext(WeatherContext);
+  const [inputCity, setInputCity] = useState('');
 
   const handleSearch = () => {
     if (inputCity.trim()) {
       console.log("Ciudad a buscar:", inputCity);
-      searchCity(inputCity); 
-      setInputCity(''); 
+      searchCity(inputCity);
+      setInputCity('');
     } else {
       alert('Por favor ingrese una ciudad válida');
     }
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter') { 
-      handleSearch(); 
+    if (e.key === 'Enter') {
+      handleSearch();
     }
   };
 
@@ -29,15 +30,15 @@ export const Header = ({ toggleTheme, darkMode }) => {
           type="text"
           placeholder="Escribe una ciudad..."
           value={inputCity}
-          onChange={(e) => setInputCity(e.target.value)} 
-          onKeyDown={handleKeyPress} 
-          className="p-2 rounded-lg bg-gray-100 dark:bg-zinc-600 text-gray-800 dark:text-white"
+          onChange={(e) => setInputCity(e.target.value)}
+          onKeyDown={handleKeyPress}
+          className="p-2 rounded-l-lg bg-gray-100 dark:bg-zinc-600 text-gray-800 dark:text-white border border-gray-300 dark:border-zinc-700 focus:outline-none border-none"
         />
         <button
-          onClick={handleSearch} 
-          className="ml-2 p-2 rounded-lg bg-cyan-600 text-white"
+          onClick={handleSearch}
+          className="p-[9.4px] font-bold bg-cyan-600 text-white hover:bg-cyan-700 rounded-r-lg border-none border-cyan-600"
         >
-          Buscar
+          <CiSearch size={21} />
         </button>
       </div>
 
